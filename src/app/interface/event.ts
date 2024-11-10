@@ -3,7 +3,6 @@ export interface Event {
     nameOfEvent: string;
     hostName: string;
     email: string;
-    phoneNumber?: number;
     imageUrl: string;
-    isAdmin: boolean;
+    isAdmin?: boolean;
 }

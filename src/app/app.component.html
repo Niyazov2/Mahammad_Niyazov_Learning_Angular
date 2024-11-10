@@ -7,7 +7,16 @@
 </head>
 <body>
   <div>
-    <h1>{{firstName + " "+lastName}}</h1>
-  </div>  
+<h1>Events</h1>
+<div *ngFor="let event of events">
+  <h2>{{ event.nameOfEvent }}</h2>
+  <p><strong>Hosted by:</strong> {{ event.hostName }}</p>
+  <p><strong>Email:</strong> {{ event.email }}</p>
+  <div *ngIf="event.imageUrl">
+    <img [src]="event.imageUrl" alt="{{ event.nameOfEvent }}" />
+  </div>
+  <p><strong>Admin Access:</strong> {{ event.isAdmin ? 'Yes' : 'No' }}</p>
+</div>
+</div>
 </body>
 </html>
