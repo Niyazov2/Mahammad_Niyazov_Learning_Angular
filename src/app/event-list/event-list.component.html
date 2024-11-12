@@ -1,4 +1,4 @@
-<div *ngFor="let event of eventList">
+<div *ngFor="let event of eventList; let i = index" [ngClass] ="i % 2 === 0 ? 'even-item' : 'odd-item'" >
         <li>{{event.id}}</li>
         <li>{{event.nameOfEvent}}</li>
         <li>{{event.hostName}}</li>
