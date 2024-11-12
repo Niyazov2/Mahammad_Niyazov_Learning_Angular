@@ -1,1 +1,8 @@
-<p>event-list-item works!</p>
+<div *ngIf="event" class="event-list">
+    <h2>Events</h2>
+    <p><strong>ID:</strong>{{ event.id}}</p>
+    <p><strong>Name of the event:</strong>{{event.nameOfEvent}}</p>
+    <p><strong>Hosted By:</strong>{{event.hostName}}</p>
+    <p><strong>Email:</strong>{{event.email}}</p>
+    <p><strong>Admin:</strong>{{event.isAdmin ? "Yes" : "No"}}</p>
+</div>
