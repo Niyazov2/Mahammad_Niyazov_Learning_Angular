@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { eventList } from '../data/event-items';
+import { Event } from '../interface/event';
 import { NgFor, NgClass } from '@angular/common';
 import { EventListItemComponent } from "../event-list-item/event-list-item.component";
+import { EventServiceService } from '../services/event-service.service';
 
 @Component({
   selector: 'app-event-list',
@@ -11,5 +12,13 @@ import { EventListItemComponent } from "../event-list-item/event-list-item.compo
   styleUrl: './event-list.component.css'
 })
 export class EventListComponent {
-eventList = eventList;
+ eventList: Event[] = [];
+
+constructor(private EventServiceService: EventServiceService) {}
+
+ngOnInit(): void{
+  this.EventServiceService.getEvents().subscribe((data) =>{
+    this.eventList = data;
+  });
+}
 }
