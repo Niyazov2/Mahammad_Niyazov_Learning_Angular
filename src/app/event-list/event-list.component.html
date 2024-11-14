@@ -1,3 +1,7 @@
+<div *ngIf="selectedEvent">
+    <app-event-list-item [event]="selectedEvent"></app-event-list-item>
+  </div>
+
 <div *ngFor="let event of eventList; let i = index" [ngClass] ="i % 2 === 0 ? 'even-item' : 'odd-item'" >
         <li>{{event.id}}</li>
         <li>{{event.nameOfEvent}}</li>
