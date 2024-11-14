@@ -14,4 +14,27 @@ export class EventServiceService {
   getEvents(): Observable<Event[]> {
     return of(eventList);
   }
+
+  getEventsById(id: number): Observable<Event | undefined>{
+    const event = this.list.find((event) => event.id === id);
+    return of(event);
+  }
+
+   addEvent(newEvent: Event): Observable<Event[]> {
+    this.list.push(newEvent);
+    return of(this.list);
+   }
+
+   updateEvent(updateEvent: Event): Observable<Event[]>{
+    const index = this.list.findIndex((list) => list.id === updateEvent.id);
+    if(index !== -1){
+      this.list[index] = updateEvent;
+    }
+    return of(this.list)
+   }
+
+   deleteEvent(id: number): Observable<Event[]>{
+    this.list = this.list.filter((list) => list.id !== id);
+    return of(this.list); 
+   }
 }
