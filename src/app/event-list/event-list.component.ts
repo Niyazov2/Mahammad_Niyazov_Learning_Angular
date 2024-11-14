@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { Event } from '../interface/event';
-import { NgFor, NgClass, NgIf } from '@angular/common';
+import { NgFor, NgClass, NgIf, NgOptimizedImage } from '@angular/common';
 import { EventListItemComponent } from "../event-list-item/event-list-item.component";
 import { EventServiceService } from '../services/event-service.service';
 
 @Component({
   selector: 'app-event-list',
   standalone: true,
-  imports: [NgFor, EventListItemComponent, NgClass, NgIf],
+  imports: [NgFor, EventListItemComponent, NgClass, NgIf, NgOptimizedImage],
   templateUrl: './event-list.component.html',
   styleUrl: './event-list.component.css'
 })

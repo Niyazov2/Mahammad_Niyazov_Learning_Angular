@@ -1,3 +1,9 @@
+<div>
+    <nav>
+        <a routerLink="/event" routerLinkActive="active">Event List</a>
+        <a routerLink="/modify-event" routerLinkActive="active">Modify Events</a>
+    </nav>
+</div>
+
 <h1>{{title}}</h1>
-<app-event-list-item></app-event-list-item>
-<app-event-list></app-event-list>
+<router-outlet></router-outlet>

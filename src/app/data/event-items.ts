@@ -4,7 +4,7 @@ export const eventList = [
     nameOfEvent: "Windsor-Essex Tech Conference",
     hostName: "Niyazov",
     email: "niyazov@gmail.com",
-    imageUrl:"",
+    imageUrl:"/assets/images/windsorEssexTech.jpeg",
     isAdmin: true
     },
     {
@@ -12,7 +12,7 @@ export const eventList = [
       nameOfEvent: "Angular Conference 2024",
       hostName: "Jane Doe",
       email: "doe@gmail.com",
-      imageUrl:"",
+      imageUrl:"/assets/images/angularConf.png",
       isAdmin: false
     },
     {
@@ -20,7 +20,7 @@ export const eventList = [
       nameOfEvent: "Artifical Intelligence Workshop",
       hostName: "Usman",
       email: "usman213@gmail.com",
-      imageUrl:"",
+      imageUrl:"/assets/images/aiWorkshop.png",
       isAdmin:true
     },
     {
@@ -28,7 +28,7 @@ export const eventList = [
       nameOfEvent: "Blockchain Expo",
       hostName: "Michael",
       email: "michael@example.com",
-      imageUrl: "",
+      imageUrl: "/assets/images/blockchainExpo.png",
       isAdmin: false
   },
   {
@@ -36,7 +36,7 @@ export const eventList = [
       nameOfEvent: "Marketing",
       hostName: "Ahmed ",
       email: "ahmed@example.com",
-      imageUrl: "",
+      imageUrl: "/assets/images/marketingExpo.png",
       isAdmin: true
   },
   {
@@ -44,7 +44,7 @@ export const eventList = [
       nameOfEvent: "Data Science Meetup",
       hostName: "Ashley",
       email: "ashley@example.com",
-      imageUrl: "",
+      imageUrl: "/assets/images/dataExpo.jpg",
       isAdmin: true
   }
 ]
