@@ -7,7 +7,7 @@ import { EventServiceService } from '../services/event-service.service';
 @Component({
   selector: 'app-event-list',
   standalone: true,
-  imports: [NgFor, EventListItemComponent, NgClass, NgIf, NgOptimizedImage],
+  imports: [NgFor, NgClass, NgIf, NgOptimizedImage, EventListItemComponent],
   templateUrl: './event-list.component.html',
   styleUrl: './event-list.component.css'
 })
@@ -33,4 +33,15 @@ selectEvent(id:number){
     this.selectedEvent = selectedData;
   })
 }
+
+updateEvent(item: Event){
+  this.EventServiceService.updateEvent(item);
 }
+
+deleteEvent(id: number){
+  this.EventServiceService.deleteEvent(id);
+}
+}
+
+
+

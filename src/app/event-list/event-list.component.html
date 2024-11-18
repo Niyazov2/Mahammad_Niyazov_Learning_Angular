@@ -3,10 +3,7 @@
   </div>
 
 <div *ngFor="let event of eventList; let i = index" [ngClass] ="i % 2 === 0 ? 'even-item' : 'odd-item'" >
-        <li>{{event.id}}</li>
-        <li>{{event.nameOfEvent}}</li>
-        <li>{{event.hostName}}</li>
-        <li>{{event.email}}</li>
-        <img [ngSrc]="event.imageUrl" width="100" height="100">
-        <li>{{event.isAdmin ? "Yes" : "No"}}</li>
+   <app-event-list-item [inStock]="event"></app-event-list-item>
+   <button (click)="updateEvent(event)">Update</button>
+   <button (click)="deleteEvent(event.id)">Delete</button>
     </div>

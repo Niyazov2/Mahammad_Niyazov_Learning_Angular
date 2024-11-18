@@ -1,1 +1,19 @@
-<p>modify-item-list works!</p>
+<form [formGroup]="eventForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="id">ID:</label>
+        <input type="number" id="id" formControlName="id">
+    </div>
+
+    <div class="form-group">
+        <label for="nameOfEvent">Name of the Event:</label>
+        <input type="text" id="name" formControlName="name">
+    </div>
+
+    <div class="form-group">
+        <label for="inStock">In Stock:</label>
+        <input type="number" id="inStock" formControlName="inStock">
+    </div>
+
+    <button type="submit">Submit</button>
+
+    </form>

@@ -11,5 +11,6 @@ import { Event } from '../interface/event';
 })
 export class EventListItemComponent {
   @Input() event?: Event;
+  @Input() inStock?: Event; 
 
 }
