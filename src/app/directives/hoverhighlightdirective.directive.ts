@@ -1,16 +1,16 @@
-import { Directive, ElementRef, HostListener, Input, input } from '@angular/core';
+import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 
 @Directive({
   selector: '[appHoverhighlightdirective]',
   standalone: true
 })
 export class HoverhighlightdirectiveDirective {
-  @Input() appHoverHighlight = '';
+  @Input() appHoverhighlightdirective = '';
 
   constructor(private el: ElementRef) { }
 
   @HostListener('mouseenter') onMouseEnter() {
-    this.highlight(this.appHoverHighlight || '#bdc1ac');
+    this.highlight(this.appHoverhighlightdirective || '#bdc1ac');
   }
 
   @HostListener('mouseenter') onMouseLeave() {
