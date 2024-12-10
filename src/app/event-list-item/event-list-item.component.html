@@ -3,6 +3,7 @@
     <p><strong>ID:</strong>{{ event.id}}</p>
     <p><strong>Name of the event:</strong>{{event.nameOfEvent.toString() | uppercase}}</p>
     <p><strong>Hosted By:</strong>{{event.hostName | lowercase}}</p>
+    <p><strong>Event Fee:</strong>{{ event.fees | currencyWithSymbol:'$' }}</p>
     <p><strong>Email:</strong>{{event.email}}</p>
     <p><strong>Admin:</strong>{{event.isAdmin ? "Yes" : "No"}}</p>
     <p><strong>Last Updated:</strong>{{today | date:

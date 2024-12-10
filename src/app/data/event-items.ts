@@ -5,6 +5,7 @@ export const eventList = [
     hostName: "Niyazov",
     email: "niyazov@gmail.com",
     imageUrl:"/assets/images/windsorEssexTech.jpeg",
+    fees: 200,
     isAdmin: true,
     lastUpdated: new Date()
     },
@@ -14,6 +15,7 @@ export const eventList = [
       hostName: "Jane Doe",
       email: "doe@gmail.com",
       imageUrl:"/assets/images/angularConf.png",
+      fees: 100,
       isAdmin: false,
       lastUpdated: new Date()
     },
@@ -23,6 +25,7 @@ export const eventList = [
       hostName: "Usman",
       email: "usman213@gmail.com",
       imageUrl:"/assets/images/aiWorkshop.png",
+      fees: 150,
       isAdmin:true,
       lastUpdated: new Date()
     },
@@ -32,6 +35,7 @@ export const eventList = [
       hostName: "Michael",
       email: "michael@example.com",
       imageUrl: "/assets/images/blockchainExpo.png",
+      fees: 300,
       isAdmin: false,
       lastUpdated: new Date()
   },
@@ -41,6 +45,7 @@ export const eventList = [
       hostName: "Ahmed ",
       email: "ahmed@example.com",
       imageUrl: "/assets/images/marketingExpo.png",
+      fees: 250,
       isAdmin: true,
       lastUpdated: new Date()
   },
@@ -50,6 +55,7 @@ export const eventList = [
       hostName: "Ashley",
       email: "ashley@example.com",
       imageUrl: "/assets/images/dataExpo.jpg",
+      fees: 300,
       isAdmin: true,
       lastUpdated: new Date()
   }
