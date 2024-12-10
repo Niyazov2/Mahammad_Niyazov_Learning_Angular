@@ -1,4 +1,4 @@
-<div *ngIf="event" class="event-list">
+<div *ngIf="event" [appHoverhighlightdirective]="'lightgray'" class="event-list">
     <h2>Events</h2>
     <p><strong>ID:</strong>{{ event.id}}</p>
     <p><strong>Name of the event:</strong>{{event.nameOfEvent.toString() | uppercase}}</p>

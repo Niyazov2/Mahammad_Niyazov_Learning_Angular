@@ -2,11 +2,12 @@ import { DatePipe, LowerCasePipe, NgIf, NgOptimizedImage, UpperCasePipe } from '
 import { Component, Input } from '@angular/core';
 import { Event } from '../interface/event';
 import { CurrencyWithSymbolPipe } from '../pipes/currency-with-symbol.pipe';
+import { HoverhighlightdirectiveDirective } from '../directives/hoverhighlightdirective.directive';
 
 @Component({
   selector: 'app-event-list-item',
   standalone: true,
-  imports: [NgIf,NgOptimizedImage,DatePipe, UpperCasePipe, LowerCasePipe, CurrencyWithSymbolPipe],
+  imports: [NgIf,NgOptimizedImage,DatePipe, UpperCasePipe, LowerCasePipe, CurrencyWithSymbolPipe, HoverhighlightdirectiveDirective],
   templateUrl: './event-list-item.component.html',
   styleUrl: './event-list-item.component.css'
 })
