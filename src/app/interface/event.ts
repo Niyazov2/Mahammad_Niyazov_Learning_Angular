@@ -5,4 +5,5 @@ export interface Event {
     email: string;
     imageUrl: string;
     isAdmin?: boolean;
+    lastUpdated: Date;
 }

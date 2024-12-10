@@ -8,7 +8,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-modify-item-list',
   standalone: true,
-  imports: [NgFor, ReactiveFormsModule],
+  imports: [ReactiveFormsModule],
   templateUrl: './modify-item-list.component.html',
   styleUrl: './modify-item-list.component.css'
 })

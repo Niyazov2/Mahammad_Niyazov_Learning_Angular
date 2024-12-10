@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-event-list',
   standalone: true,
-  imports: [NgFor, NgClass, NgIf, NgOptimizedImage, EventListItemComponent],
+  imports: [NgFor, NgClass, NgIf, EventListItemComponent],
   templateUrl: './event-list.component.html',
   styleUrl: './event-list.component.css'
 })
