@@ -3,6 +3,7 @@ import { Event } from '../interface/event';
 import { NgFor, NgClass, NgIf, NgOptimizedImage } from '@angular/common';
 import { EventListItemComponent } from "../event-list-item/event-list-item.component";
 import { EventServiceService } from '../services/event-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-event-list',
@@ -17,7 +18,7 @@ selectedEvent?: Event;
 
  eventList: Event[] = [];
 
-constructor(private EventServiceService: EventServiceService) {}
+constructor(private EventServiceService: EventServiceService, private Router: Router) {}
 
 ngOnInit(): void{
   this.EventServiceService.getEvents().subscribe((data) =>{
@@ -35,13 +36,15 @@ selectEvent(id:number){
 }
 
 updateEvent(item: Event){
-  this.EventServiceService.updateEvent(item);
+  this.selectedEvent = item;
+  this.Router.navigate(['events', item.id]);
 }
 
 deleteEvent(id: number){
   this.EventServiceService.deleteEvent(id);
+  this.eventList = this.eventList.filter((item) => item.id ! == id);
 }
-}
+}0
 
 
 

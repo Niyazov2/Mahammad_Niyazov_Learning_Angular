@@ -1,19 +1,19 @@
 <form [formGroup]="eventForm" (ngSubmit)="onSubmit()">
-    <div class="form-group">
-        <label for="id">ID:</label>
-        <input type="number" id="id" formControlName="id">
-    </div>
-
-    <div class="form-group">
-        <label for="nameOfEvent">Name of the Event:</label>
-        <input type="text" id="name" formControlName="name">
-    </div>
-
-    <div class="form-group">
-        <label for="inStock">In Stock:</label>
-        <input type="number" id="inStock" formControlName="inStock">
-    </div>
-
+    <label for="id">Event ID</label>
+    <input id="id" formControlName="id" type="text">
+    
+    <label for="nameOfEvent">Event Name</label>
+    <input id="nameOfEvent" formControlName="nameOfEvent" type="text">
+  
+    <label for="hostName">Host Name</label>
+    <input id="hostName" formControlName="hostName" type="text">
+    
+    <label for="email">Email</label>
+    <input id="email" formControlName="email" type="email">
+    
+    <label for="isAdmin">Is Admin</label>
+    <input id="isAdmin" formControlName="isAdmin" type="checkbox">
+  
     <button type="submit">Submit</button>
-
-    </form>
+  </form>
+  
