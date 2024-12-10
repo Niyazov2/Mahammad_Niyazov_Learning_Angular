@@ -1,18 +1,18 @@
 <form [formGroup]="eventForm" (ngSubmit)="onSubmit()">
     <label for="id">Event ID</label>
-    <input id="id" formControlName="id" type="text">
+    <input id="id" formControlName="id" type="text" appHighlightOnFocus>
     
     <label for="nameOfEvent">Event Name</label>
-    <input id="nameOfEvent" formControlName="nameOfEvent" type="text">
+    <input id="nameOfEvent" formControlName="nameOfEvent" type="text" appHighlightOnFocus>
   
     <label for="hostName">Host Name</label>
-    <input id="hostName" formControlName="hostName" type="text">
+    <input id="hostName" formControlName="hostName" type="text" appHighlightOnFocus>
     
     <label for="email">Email</label>
-    <input id="email" formControlName="email" type="email">
+    <input id="email" formControlName="email" type="email" appHighlightOnFocus>
     
     <label for="isAdmin">Is Admin</label>
-    <input id="isAdmin" formControlName="isAdmin" type="checkbox">
+    <input id="isAdmin" formControlName="isAdmin" type="checkbox" appHighlightOnFocus>
   
     <button type="submit">Submit</button>
   </form>

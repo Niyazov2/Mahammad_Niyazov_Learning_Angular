@@ -2,13 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { EventServiceService } from '../services/event-service.service';
 import { NgFor } from '@angular/common';
+import { HighlightOnFocusDirective } from '../directives/highlight-on-focus.directive';
 import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
   selector: 'app-modify-item-list',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, HighlightOnFocusDirective],
   templateUrl: './modify-item-list.component.html',
   styleUrl: './modify-item-list.component.css'
 })
@@ -28,6 +29,7 @@ export class ModifyItemListComponent implements OnInit {
       hostName: ['', Validators.required],
       email: ['', Validators.required],
       isAdmin: ['false', Validators.required],
+      fees: ['', Validators.required, Validators.min(0)],
     }));
   }
 
@@ -48,6 +50,4 @@ export class ModifyItemListComponent implements OnInit {
       });
     }
   }
-  
-
 }
