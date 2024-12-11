@@ -1,19 +1,25 @@
 <form [formGroup]="eventForm" (ngSubmit)="onSubmit()">
-    <label for="id">Event ID</label>
-    <input id="id" formControlName="id" type="text" appHighlightOnFocus>
-    
-    <label for="nameOfEvent">Event Name</label>
-    <input id="nameOfEvent" formControlName="nameOfEvent" type="text" appHighlightOnFocus>
-  
-    <label for="hostName">Host Name</label>
-    <input id="hostName" formControlName="hostName" type="text" appHighlightOnFocus>
-    
-    <label for="email">Email</label>
-    <input id="email" formControlName="email" type="email" appHighlightOnFocus>
-    
-    <label for="isAdmin">Is Admin</label>
-    <input id="isAdmin" formControlName="isAdmin" type="checkbox" appHighlightOnFocus>
-  
-    <button type="submit">Submit</button>
-  </form>
-  
+  <mat-form-field appearance="fill">
+      <mat-label>Event ID</mat-label>
+      <input matInput id="id" formControlName="id" type="text" appHighlightOnFocus matTooltip="Enter the unique event ID">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+      <mat-label>Event Name</mat-label>
+      <input matInput id="nameOfEvent" formControlName="nameOfEvent" type="text" appHighlightOnFocus matTooltip="Enter the name of the event">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+      <mat-label>Host Name</mat-label>
+      <input matInput id="hostName" formControlName="hostName" type="text" appHighlightOnFocus matTooltip="Enter the name of the host">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput id="email" formControlName="email" type="email" appHighlightOnFocus matTooltip="Enter a valid email address">
+  </mat-form-field>
+
+  <mat-checkbox formControlName="isAdmin" matTooltip="Check if the user is an admin">Is Admin</mat-checkbox>
+
+  <button mat-raised-button type="submit">Submit</button>
+</form>

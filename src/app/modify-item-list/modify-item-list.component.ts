@@ -4,12 +4,13 @@ import { EventServiceService } from '../services/event-service.service';
 import { NgFor } from '@angular/common';
 import { HighlightOnFocusDirective } from '../directives/highlight-on-focus.directive';
 import { ActivatedRoute, Router } from '@angular/router';
-
+import { MatFormFieldModule, MatLabel } from '@angular/material/form-field';
+import { MatTooltipModule} from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-modify-item-list',
   standalone: true,
-  imports: [ReactiveFormsModule, HighlightOnFocusDirective],
+  imports: [ReactiveFormsModule, HighlightOnFocusDirective, MatLabel, MatFormFieldModule, MatTooltipModule],
   templateUrl: './modify-item-list.component.html',
   styleUrl: './modify-item-list.component.css'
 })

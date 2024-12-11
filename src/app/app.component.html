@@ -1,9 +1,11 @@
-<div>
-    <nav>
-        <a routerLink="/event" routerLinkActive="active">Event List</a>
-        <a routerLink="/modify-event" routerLinkActive="active">Modify Events</a>
-    </nav>
-</div>
+<mat-toolbar color="primary">
+    <button mat-button routerLink="/event" routerLinkActive="active">Event List</button>
+    <button mat-button routerLink="/modify-event" routerLinkActive="active">Modify Events</button>
+  </mat-toolbar>
+  
+  <h1>{{ title }}</h1>
+  <router-outlet></router-outlet>
+  
 
 <h1>{{title}}</h1>
 <router-outlet></router-outlet>

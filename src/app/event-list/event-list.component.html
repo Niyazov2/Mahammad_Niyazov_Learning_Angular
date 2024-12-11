@@ -1,9 +1,9 @@
 <div *ngIf="selectedEvent">
-    <app-event-list-item [event]="selectedEvent"></app-event-list-item>
-  </div>
+  <app-event-list-item [event]="selectedEvent"></app-event-list-item>
+</div>
 
-<div *ngFor="let event of eventList; let i = index" [ngClass] ="i % 2 === 0 ? 'even-item' : 'odd-item'" >
-   <app-event-list-item [inStock]="event"></app-event-list-item>
-   <button (click)="updateEvent(event)">Update</button>
-   <button (click)="deleteEvent(event.id)">Delete</button>
-    </div>
+<div *ngFor="let event of eventList; let i = index" [ngClass]="i % 2 === 0 ? 'even-item' : 'odd-item'">
+ <app-event-list-item [inStock]="event"></app-event-list-item>
+ <button mat-flat-button (click)="updateEvent(event)">Update</button>
+ <button mat-flat-button (click)="deleteEvent(event.id)">Delete</button>
+</div>
